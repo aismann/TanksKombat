@@ -47,7 +47,7 @@ Engine::Engine()
 
 void Engine::destroyInstance()
 {
-	CC_SAFE_DELETE(_instance);
+	AX_SAFE_DELETE(_instance);
 
 	AudioEngine::end();
 }
@@ -65,7 +65,7 @@ void Engine::launchGame()
 	auto glview = director->getOpenGLView();
 
 	if (!glview) {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_WIN32) || (AX_TARGET_PLATFORM == AX_PLATFORM_MAC) || (AX_TARGET_PLATFORM == AX_PLATFORM_LINUX)
 		if (Settings.fullscreen)
 			glview = GLViewImpl::createWithFullScreen(GAME_TITLE);
 		else

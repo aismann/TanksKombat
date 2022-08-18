@@ -49,60 +49,60 @@ bool GameSettingsScene::init()
 	auto tank1Item = SimpleMenuItem::create("TANK 1\t\t%s", FONT_MAIN);
 	tank1Item->setValues({ "NONE", "HUMAN", "CPU" });
 	tank1Item->setCurrentValueIndex((int)_engine->GameSettings.tankTypes[0]);
-	tank1Item->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	tank1Item->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	tank1Item->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	tank1Item->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	tank1Item->setTag(TAG_TANK1);
 	tank1Item->setAnchorPoint(Vec2(0, 0.5f));
 
 	auto tank2Item = SimpleMenuItem::create("TANK 2\t\t%s", FONT_MAIN);
 	tank2Item->setValues({ "NONE", "HUMAN", "CPU" });
 	tank2Item->setCurrentValueIndex((int)_engine->GameSettings.tankTypes[1]);
-	tank2Item->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	tank2Item->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	tank2Item->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	tank2Item->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	tank2Item->setTag(TAG_TANK2);
 	tank2Item->setAnchorPoint(Vec2(0, 0.5f));
 
 	auto tank3Item = SimpleMenuItem::create("TANK 3\t\t%s", FONT_MAIN);
 	tank3Item->setValues({ "NONE", "HUMAN", "CPU" });
 	tank3Item->setCurrentValueIndex((int)_engine->GameSettings.tankTypes[2]);
-	tank3Item->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	tank3Item->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	tank3Item->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	tank3Item->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	tank3Item->setTag(TAG_TANK3);
 	tank3Item->setAnchorPoint(Vec2(0, 0.5f));
 
 	auto tank4Item = SimpleMenuItem::create("TANK 4\t\t%s", FONT_MAIN);
 	tank4Item->setValues({ "NONE", "HUMAN", "CPU" });
 	tank4Item->setCurrentValueIndex((int)_engine->GameSettings.tankTypes[3]);
-	tank4Item->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	tank4Item->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	tank4Item->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	tank4Item->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	tank4Item->setTag(TAG_TANK4);
 	tank4Item->setAnchorPoint(Vec2(0, 0.5f));
 
 	auto mapItem = SimpleMenuItem::create("MAP\t\t\t\t\t%s", FONT_MAIN);
 	mapItem->setValues({ "RANDOM", "CA CAVE" });
 	mapItem->setCurrentValueIndex((int)_engine->GameSettings.mapType);
-	mapItem->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	mapItem->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	mapItem->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	mapItem->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	mapItem->setTag(TAG_MAP);
 	mapItem->setAnchorPoint(Vec2(0, 0.5f));
 
 	auto sizeItem = SimpleMenuItem::create("SIZE\t\t\t\t%s", FONT_MAIN);
 	sizeItem->setValues({ "SMALL", "MEDIUM", "LARGE" });
 	sizeItem->setCurrentValueIndex((int)_engine->GameSettings.mapSize);
-	sizeItem->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	sizeItem->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	sizeItem->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	sizeItem->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	sizeItem->setTag(TAG_SIZE);
 	sizeItem->setAnchorPoint(Vec2(0, 0.5f));
 
 	auto modeItem = SimpleMenuItem::create("MODE\t\t\t\t%s", FONT_MAIN);
 	modeItem->setValues(_engine->getGameModes());
 	modeItem->setCurrentValue(_engine->GameSettings.currentGameMode);
-	modeItem->setActivateCallback(CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
-	modeItem->setValueChangedCallback(CC_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
+	modeItem->setActivateCallback(AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	modeItem->setValueChangedCallback(AX_CALLBACK_1(GameSettingsScene::menuItemValueChanged, this));
 	modeItem->setTag(TAG_MODE);
 	modeItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto doneItem = SimpleMenuItem::create("DONE", FONT_MAIN, CC_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
+	auto doneItem = SimpleMenuItem::create("DONE", FONT_MAIN, AX_CALLBACK_1(GameSettingsScene::menuItemActivated, this));
 	doneItem->setTag(TAG_DONE);
 	doneItem->setAnchorPoint(Vec2(0, 0.5f));
 

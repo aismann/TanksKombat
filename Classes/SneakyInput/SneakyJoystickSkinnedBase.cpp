@@ -38,7 +38,7 @@ bool SneakyJoystickSkinnedBase::init()
 
 		this->joystick = nullptr;
 
-		this->schedule(CC_SCHEDULE_SELECTOR(SneakyJoystickSkinnedBase::updatePositions));
+		this->schedule(AX_SCHEDULE_SELECTOR(SneakyJoystickSkinnedBase::updatePositions));
 		pRet = true;
 	}
 	return pRet;

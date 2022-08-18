@@ -30,12 +30,12 @@ Tank::Tank(Team team, int lives, int ammo)
 Tank::~Tank()
 {
 	for (auto anim : _idleStates)
-		CC_SAFE_RELEASE_NULL(anim.second);
+		AX_SAFE_RELEASE_NULL(anim.second);
 	_idleStates.clear();
 
-	CC_SAFE_RELEASE_NULL(_moveTowardState);
-	CC_SAFE_RELEASE_NULL(_shotState);
-	CC_SAFE_RELEASE_NULL(_shot);
+	AX_SAFE_RELEASE_NULL(_moveTowardState);
+	AX_SAFE_RELEASE_NULL(_shotState);
+	AX_SAFE_RELEASE_NULL(_shot);
 }
 
 Team Tank::getTeam() const
@@ -354,9 +354,9 @@ void Tank::startShotState()
 	if (_shotState == nullptr) {
 		_shotState = Sequence::create
 		(
-			CallFunc::create(CC_CALLBACK_0(Tank::shotAnimationStarted, this)),
+			CallFunc::create(AX_CALLBACK_0(Tank::shotAnimationStarted, this)),
 			DelayTime::create(SHOT_ANIMATION_TIME),
-			CallFunc::create(CC_CALLBACK_0(Tank::shotAnimationFinished, this)),
+			CallFunc::create(AX_CALLBACK_0(Tank::shotAnimationFinished, this)),
 			nullptr
 		);
 		_shotState->setTag(SHOT_STATE_TAG);
@@ -540,7 +540,7 @@ bool Tank::startMoveTowardState(const Pos2& target, bool getUpClose)
 	if (_moveTowardState == nullptr) {
 		_moveTowardState = RepeatForever::create(
 			Sequence::create(
-				CallFunc::create(CC_CALLBACK_0(Tank::updateMoveTowardState, this)),
+				CallFunc::create(AX_CALLBACK_0(Tank::updateMoveTowardState, this)),
 				DelayTime::create(_moveTowardStepDelay),
 				nullptr
 			)

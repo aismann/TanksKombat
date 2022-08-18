@@ -36,10 +36,10 @@ public:
 	static void updatePassableLayer(const Pos2& pos, const Pos2& prevPos);
 	static void removeFromPassableLayer(const Pos2& pos);
 
-	CC_PROPERTY(Direction, _direction, GridDirection);
-	CC_PROPERTY(cocos2d::Sprite*, _sprite, Sprite);
-	CC_SYNTHESIZE_READONLY(Type, _type, Type);
-	CC_SYNTHESIZE(bool, _isPassable, Passable);
+	AX_PROPERTY(Direction, _direction, GridDirection);
+	AX_PROPERTY(cocos2d::Sprite*, _sprite, Sprite);
+	AX_SYNTHESIZE_READONLY(Type, _type, Type);
+	AX_SYNTHESIZE(bool, _isPassable, Passable);
 
 	virtual bool init() override;
 protected:

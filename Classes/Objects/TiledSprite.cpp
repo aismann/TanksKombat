@@ -10,13 +10,13 @@ TiledSprite* TiledSprite::createWithSprite(Sprite* sourceSprite, int width, int 
 		ts->autorelease();
 		return ts;
 	}
-	CC_SAFE_DELETE(ts);
+	AX_SAFE_DELETE(ts);
 	return nullptr;
 }
 
 bool TiledSprite::initWithTX(Sprite* sourceSprite, int width, int height)
 {
-	CC_ASSERT(width > 0 && height > 0);
+	AX_ASSERT(width > 0 && height > 0);
 
 	if (!Sprite::init())
 		return false;

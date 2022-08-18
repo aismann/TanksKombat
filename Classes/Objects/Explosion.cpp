@@ -14,7 +14,7 @@ Explosion::Explosion()
 
 Explosion::~Explosion()
 {
-	CC_SAFE_RELEASE_NULL(_animation);
+	AX_SAFE_RELEASE_NULL(_animation);
 }
 
 Explosion* Explosion::createFromPool(const Pos2& pos)

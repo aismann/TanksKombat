@@ -16,7 +16,7 @@ public:
 
 	static SimpleMenu* create(Type type);
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_WINRT)
 	// VS2013 does not support nullptr in variable args lists and variadic templates are also not supported.
 	typedef cocos2d::MenuItem* M;
 	static SimpleMenu* create(Type type, M m1, std::nullptr_t listEnd) { return variadicCreate(type, m1, NULL); }
@@ -33,7 +33,7 @@ public:
 	// On WP8 for lists longer than 10 items, use createWithArray or variadicCreate with NULL as the last argument.
 	static SimpleMenu* variadicCreate(Type type, cocos2d::MenuItem* item, ...);
 #else
-	static SimpleMenu* create(Type type, cocos2d::MenuItem* item, ...) CC_REQUIRES_NULL_TERMINATION;
+	static SimpleMenu* create(Type type, cocos2d::MenuItem* item, ...) AX_REQUIRES_NULL_TERMINATION;
 #endif
 
 	static SimpleMenu* createWithArray(Type type, const cocos2d::Vector<cocos2d::MenuItem*>& arrayOfItems);

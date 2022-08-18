@@ -10,7 +10,7 @@ SimpleMenu* SimpleMenu::create(Type type)
 	return SimpleMenu::create(type, nullptr, nullptr);
 }
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_WINRT)
 SimpleMenu* SimpleMenu::variadicCreate(Type type, MenuItem* item, ...)
 {
 	va_list args;
@@ -48,7 +48,7 @@ SimpleMenu* SimpleMenu::createWithArray(Type type, const Vector<MenuItem*>& arra
 	}
 	else
 	{
-		CC_SAFE_DELETE(ret);
+		AX_SAFE_DELETE(ret);
 	}
 
 	return ret;
@@ -98,7 +98,7 @@ void SimpleMenu::initOpt(Type type)
 	_type = type;
 
 	KeyboardEventsFunc listener;
-	listener.onKeyPressed = CC_CALLBACK_2(SimpleMenu::onKeyPressed2, this);
+	listener.onKeyPressed = AX_CALLBACK_2(SimpleMenu::onKeyPressed2, this);
 	listener.onKeyReleased = nullptr;
 	_listenerId = BaseScene::getCurrentScene()->addKeyboardEvents(listener);
 

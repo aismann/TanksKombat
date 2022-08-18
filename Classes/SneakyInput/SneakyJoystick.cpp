@@ -35,10 +35,10 @@ void SneakyJoystick::onEnterTransitionDidFinish()
 	_eventListenerTouch = EventListenerTouchOneByOne::create();
 	_eventListenerTouch->setSwallowTouches(true);
 
-	_eventListenerTouch->onTouchBegan = CC_CALLBACK_2(SneakyJoystick::onTouchBegan, this);
-	_eventListenerTouch->onTouchMoved = CC_CALLBACK_2(SneakyJoystick::onTouchMoved, this);
-	_eventListenerTouch->onTouchEnded = CC_CALLBACK_2(SneakyJoystick::onTouchEnded, this);
-	_eventListenerTouch->onTouchCancelled = CC_CALLBACK_2(SneakyJoystick::onTouchCancelled, this);
+	_eventListenerTouch->onTouchBegan = AX_CALLBACK_2(SneakyJoystick::onTouchBegan, this);
+	_eventListenerTouch->onTouchMoved = AX_CALLBACK_2(SneakyJoystick::onTouchMoved, this);
+	_eventListenerTouch->onTouchEnded = AX_CALLBACK_2(SneakyJoystick::onTouchEnded, this);
+	_eventListenerTouch->onTouchCancelled = AX_CALLBACK_2(SneakyJoystick::onTouchCancelled, this);
 
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(_eventListenerTouch, this);
 }

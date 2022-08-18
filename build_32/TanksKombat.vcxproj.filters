@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\AppDelegate.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Engine.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\AboutScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\TiledSprite.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Projectile.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\GameObject.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Explosion.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Bonus.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\GUI\SimpleMenuItem.cpp">
+      <Filter>Source Files\Classes\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\GUI\SimpleMenu.cpp">
+      <Filter>Source Files\Classes\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\GUI\ModalDialog.cpp">
+      <Filter>Source Files\Classes\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Components\Pathfinder.cpp">
+      <Filter>Source Files\Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Components\AI.cpp">
+      <Filter>Source Files\Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\LevelGrid.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Tank.cpp">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\GameplayScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\GameSettingsScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\HighScoresScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\MainMenuScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\SettingsScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyButtonSkinnedBase.cpp">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyJoystickSkinnedBase.cpp">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyJoystick.cpp">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyButton.cpp">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\BaseScene.cpp">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\______\GitHub\aismann\TanksKombat\proj.win32\main.cpp">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\AppDelegate.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Engine.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\LevelGrid.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyButtonSkinnedBase.h">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyJoystickSkinnedBase.h">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyJoystick.h">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\SneakyInput\SneakyButton.h">
+      <Filter>Source Files\Classes\SneakyInput</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\SettingsScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\MainMenuScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\HighScoresScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\GameplayScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\GameSettingsScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\BaseScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Scenes\AboutScene.h">
+      <Filter>Source Files\Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\TiledSprite.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Tank.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Projectile.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\GameObject.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Bonus.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Objects\Explosion.h">
+      <Filter>Source Files\Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Math\Pos2.h">
+      <Filter>Source Files\Classes\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\GUI\SimpleMenuItem.h">
+      <Filter>Source Files\Classes\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\GUI\SimpleMenu.h">
+      <Filter>Source Files\Classes\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\GUI\ModalDialog.h">
+      <Filter>Source Files\Classes\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Components\Pathfinder.h">
+      <Filter>Source Files\Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Classes\Components\AI.h">
+      <Filter>Source Files\Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\proj.win32\main.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\proj.win32\resource.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\CloseNormal.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\CloseSelected.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\HelloWorld.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\fonts\Marker Felt.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\fonts\arial.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\res\.gitkeep">
+      <Filter>Resources\res</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\______\GitHub\aismann\TanksKombat\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\______\GitHub\aismann\TanksKombat\proj.win32\game.rc">
+      <Filter>Source Files\proj.win32</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{C77A6DBF-9384-3A85-8DA6-2BA4C4EDCA1F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\fonts">
+      <UniqueIdentifier>{A2B2629D-8B89-307E-8087-224CFBC8B57D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res">
+      <UniqueIdentifier>{ECF9B1BE-E384-3920-97A5-28F5F40FFDC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CA0D4D72-8BB4-393C-A941-A41F80C9B1C5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes">
+      <UniqueIdentifier>{8F96B6EC-5515-3AA3-B8FD-D03B9969285E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Components">
+      <UniqueIdentifier>{9DE336B8-FE17-30B7-944B-D2699D0F562C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\GUI">
+      <UniqueIdentifier>{581761A6-88B0-39AC-9008-643FE47E409E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Math">
+      <UniqueIdentifier>{4FD8F70A-CA15-3B6B-AE0A-0BDEF4E97DC5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Objects">
+      <UniqueIdentifier>{AF0596AC-9686-3277-8801-D555E9EB223A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Scenes">
+      <UniqueIdentifier>{26FC05F6-5B01-396A-9C1F-5118C91D834C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\SneakyInput">
+      <UniqueIdentifier>{69CCD7BE-0E1B-3D9F-AF11-B7AFE7F3E302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32">
+      <UniqueIdentifier>{4B7729C7-4AF3-3A30-A0D5-1DD14911C0AE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

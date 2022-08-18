@@ -27,7 +27,7 @@ LevelGrid* LevelGrid::createRandom(const Size& mapSize, float chanceToWall, floa
 		grid->autorelease();
 		return grid;
 	}
-	CC_SAFE_DELETE(grid);
+	AX_SAFE_DELETE(grid);
 	return nullptr;
 }
 
@@ -39,7 +39,7 @@ LevelGrid* LevelGrid::createUsingCA(const Size& mapSize, const CAParams& params,
 		grid->autorelease();
 		return grid;
 	}
-	CC_SAFE_DELETE(grid);
+	AX_SAFE_DELETE(grid);
 	return nullptr;
 }
 
@@ -220,7 +220,7 @@ Vec2 LevelGrid::positionForTileCoord(const Pos2& tileCoord) const
 
 TileValue LevelGrid::getTile(int x, int y) const
 {
-	CC_ASSERT(isValidTileCoord(Pos2(x, y)));
+	AX_ASSERT(isValidTileCoord(Pos2(x, y)));
 
 	return _grid[INDEX_FROM_XY(x, y)];
 }
@@ -232,7 +232,7 @@ TileValue LevelGrid::getTile(const Pos2& position) const
 
 void LevelGrid::setTile(int x, int y, TileValue value)
 {
-	CC_ASSERT(isValidTileCoord(Pos2(x, y)));
+	AX_ASSERT(isValidTileCoord(Pos2(x, y)));
 
 	if (_grid[INDEX_FROM_XY(x, y)] == value)
 		return;

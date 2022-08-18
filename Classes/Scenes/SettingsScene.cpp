@@ -43,40 +43,40 @@ bool SettingsScene::init()
 
 	// start, options exit menu
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_WIN32) || (AX_TARGET_PLATFORM == AX_PLATFORM_MAC) || (AX_TARGET_PLATFORM == AX_PLATFORM_LINUX)
 
-	auto fullscreenItem = SimpleMenuItem::create("FULLSCREEN\t%s", FONT_MAIN, CC_CALLBACK_1(SettingsScene::menuItemActivated, this));
+	auto fullscreenItem = SimpleMenuItem::create("FULLSCREEN\t%s", FONT_MAIN, AX_CALLBACK_1(SettingsScene::menuItemActivated, this));
 	fullscreenItem->setValues({ "OFF", "ON" });
 	fullscreenItem->setCurrentValueIndex((int)_engine->Settings.fullscreen);
 	fullscreenItem->setTag(TAG_FULLSCREEN);
-	fullscreenItem->setValueChangedCallback(CC_CALLBACK_1(SettingsScene::menuItemValueChanged, this));
+	fullscreenItem->setValueChangedCallback(AX_CALLBACK_1(SettingsScene::menuItemValueChanged, this));
 	fullscreenItem->setAnchorPoint(Vec2(0, 0.5f));
 
 #endif
 
-	auto musicItem = SimpleMenuItem::create("MUSIC\t%s", FONT_MAIN, CC_CALLBACK_1(SettingsScene::menuItemActivated, this));
+	auto musicItem = SimpleMenuItem::create("MUSIC\t%s", FONT_MAIN, AX_CALLBACK_1(SettingsScene::menuItemActivated, this));
 	musicItem->setValues({ "OFF", "ON" });
 	musicItem->setCurrentValueIndex((int)_engine->Settings.musicEnabled);
 	musicItem->setTag(TAG_MUSIC);
-	musicItem->setValueChangedCallback(CC_CALLBACK_1(SettingsScene::menuItemValueChanged, this));
+	musicItem->setValueChangedCallback(AX_CALLBACK_1(SettingsScene::menuItemValueChanged, this));
 	musicItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto sfxItem = SimpleMenuItem::create("SFX\t\t\t%s", FONT_MAIN, CC_CALLBACK_1(SettingsScene::menuItemActivated, this));
+	auto sfxItem = SimpleMenuItem::create("SFX\t\t\t%s", FONT_MAIN, AX_CALLBACK_1(SettingsScene::menuItemActivated, this));
 	sfxItem->setValues({ "OFF", "ON" });
 	sfxItem->setCurrentValueIndex((int)_engine->Settings.soundEnabled);
 	sfxItem->setTag(TAG_SOUND_FX);
-	sfxItem->setValueChangedCallback(CC_CALLBACK_1(SettingsScene::menuItemValueChanged, this));
+	sfxItem->setValueChangedCallback(AX_CALLBACK_1(SettingsScene::menuItemValueChanged, this));
 	sfxItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto aboutItem = SimpleMenuItem::create("ABOUT", FONT_MAIN, CC_CALLBACK_1(SettingsScene::menuItemActivated, this));
+	auto aboutItem = SimpleMenuItem::create("ABOUT", FONT_MAIN, AX_CALLBACK_1(SettingsScene::menuItemActivated, this));
 	aboutItem->setTag(TAG_ABOUT);
 	aboutItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto doneItem = SimpleMenuItem::create("DONE", FONT_MAIN, CC_CALLBACK_1(SettingsScene::menuItemActivated, this));
+	auto doneItem = SimpleMenuItem::create("DONE", FONT_MAIN, AX_CALLBACK_1(SettingsScene::menuItemActivated, this));
 	doneItem->setTag(TAG_DONE);
 	doneItem->setAnchorPoint(Vec2(0, 0.5f));
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_WIN32) || (AX_TARGET_PLATFORM == AX_PLATFORM_MAC) || (AX_TARGET_PLATFORM == AX_PLATFORM_LINUX)
 	auto menu = SimpleMenu::create(SimpleMenu::Type::VERTICAL, fullscreenItem, musicItem, sfxItem, aboutItem, doneItem, NULL);
 #else
 	auto menu = SimpleMenu::create(SimpleMenu::Type::VERTICAL, musicItem, sfxItem, aboutItem, doneItem, NULL);

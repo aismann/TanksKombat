@@ -54,15 +54,15 @@ bool MainMenuScene::init()
 
 	// start, options exit menu
 
-	auto startItem = SimpleMenuItem::create("START", FONT_MAIN, CC_CALLBACK_1(MainMenuScene::menuItemActivated, this));
+	auto startItem = SimpleMenuItem::create("START", FONT_MAIN, AX_CALLBACK_1(MainMenuScene::menuItemActivated, this));
 	startItem->setTag(TAG_NEW_GAME);
 	startItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto optionsItem = SimpleMenuItem::create("OPTIONS", FONT_MAIN, CC_CALLBACK_1(MainMenuScene::menuItemActivated, this));
+	auto optionsItem = SimpleMenuItem::create("OPTIONS", FONT_MAIN, AX_CALLBACK_1(MainMenuScene::menuItemActivated, this));
 	optionsItem->setTag(TAG_OPTIONS);
 	optionsItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto exitItem = SimpleMenuItem::create("EXIT", FONT_MAIN, CC_CALLBACK_1(MainMenuScene::menuItemActivated, this));
+	auto exitItem = SimpleMenuItem::create("EXIT", FONT_MAIN, AX_CALLBACK_1(MainMenuScene::menuItemActivated, this));
 	exitItem->setTag(TAG_EXIT);
 	exitItem->setAnchorPoint(Vec2(0, 0.5f));
 
@@ -106,7 +106,7 @@ void MainMenuScene::onKeyEvent(EventKeyboard::KeyCode keyCode, cocos2d::Event* e
 {
 	if (keyCode == EventKeyboard::KeyCode::KEY_BACK)
 	{
-		auto exitDialog = ModalDialog::create("Do you want to exit?", CC_CALLBACK_0(MainMenuScene::exitGame, this), nullptr, "YES", "NO");
+		auto exitDialog = ModalDialog::create("Do you want to exit?", AX_CALLBACK_0(MainMenuScene::exitGame, this), nullptr, "YES", "NO");
 		this->addChild(exitDialog, (int)LayerZOrder::MODAL_DIALOGS);
 	}
 	else if (keyCode == EventKeyboard::KeyCode::KEY_MENU) {
@@ -133,7 +133,7 @@ void MainMenuScene::onMenuItemActivated(int menuItem)
 void MainMenuScene::exitGame()
 {
 	Director::getInstance()->end();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_IOS)
 	exit(0);
 #endif
 }

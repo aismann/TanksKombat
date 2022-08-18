@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.eugenyn.tanks4"
-	android:versionCode="13"
-    android:versionName="1.0.0.13"
+    package="org.frankensoft.TanksKombat"
     android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -14,18 +12,19 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher">
         
-        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <!-- Tell AxysActivity the name of our .so -->
         <meta-data android:name="android.app.lib_name"
-                   android:value="Tanks4" />
+                   android:value="TanksKombat" />
 
         <activity
-            android:name="org.cocos2dx.cpp.AppActivity"
+            android:name="org.axys1.cpp.AppActivity"
             android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:launchMode="singleTask"
-            android:taskAffinity=""  >
+            android:taskAffinity=""
+            android:exported="true"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

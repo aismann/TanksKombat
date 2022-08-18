@@ -8,10 +8,10 @@ void SneakyButton::onEnterTransitionDidFinish()
 	_eventListenerTouch = EventListenerTouchOneByOne::create();
 	_eventListenerTouch->setSwallowTouches(true);
 
-	_eventListenerTouch->onTouchBegan = CC_CALLBACK_2(SneakyButton::onTouchBegan, this);
-	_eventListenerTouch->onTouchMoved = CC_CALLBACK_2(SneakyButton::onTouchMoved, this);
-	_eventListenerTouch->onTouchEnded = CC_CALLBACK_2(SneakyButton::onTouchEnded, this);
-	_eventListenerTouch->onTouchCancelled = CC_CALLBACK_2(SneakyButton::onTouchCancelled, this);
+	_eventListenerTouch->onTouchBegan = AX_CALLBACK_2(SneakyButton::onTouchBegan, this);
+	_eventListenerTouch->onTouchMoved = AX_CALLBACK_2(SneakyButton::onTouchMoved, this);
+	_eventListenerTouch->onTouchEnded = AX_CALLBACK_2(SneakyButton::onTouchEnded, this);
+	_eventListenerTouch->onTouchCancelled = AX_CALLBACK_2(SneakyButton::onTouchCancelled, this);
 
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(_eventListenerTouch, this);
 }
@@ -40,7 +40,7 @@ void SneakyButton::initWithRect(const Rect& rect)
 void SneakyButton::limiter(float delta)
 {
 	value = 0;
-	this->unschedule(CC_SCHEDULE_SELECTOR(SneakyButton::limiter));
+	this->unschedule(AX_SCHEDULE_SELECTOR(SneakyButton::limiter));
 	active = false;
 }
 
@@ -67,7 +67,7 @@ bool SneakyButton::onTouchBegan(Touch* touch, Event* event)
 			active = true;
 			if (!isHoldable && !isToggleable) {
 				value = 1;
-				this->schedule(CC_SCHEDULE_SELECTOR(SneakyButton::limiter), rateLimit);
+				this->schedule(AX_SCHEDULE_SELECTOR(SneakyButton::limiter), rateLimit);
 			}
 			if (isHoldable)
 				value = 1;

@@ -51,7 +51,7 @@ bool SneakyButtonSkinnedBase::init()  //Possible errors here
 		this->button = nullptr;
 		//button->retain();
 
-		this->schedule(CC_SCHEDULE_SELECTOR(SneakyButtonSkinnedBase::watchSelf));
+		this->schedule(AX_SCHEDULE_SELECTOR(SneakyButtonSkinnedBase::watchSelf));
 		pRet = true;
 	}
 	return pRet;

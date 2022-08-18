@@ -30,7 +30,7 @@ bool AI::init()
 void AI::onAdd()
 {
 	_gameObjectRemovedEventListener =
-		EventListenerCustom::create(GAME_OBJECT_REMOVED_EVENT, CC_CALLBACK_1(AI::onGameObjectRemoved, this));
+		EventListenerCustom::create(GAME_OBJECT_REMOVED_EVENT, AX_CALLBACK_1(AI::onGameObjectRemoved, this));
 	_gameObjectRemovedEventListener->retain();
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(
 		_gameObjectRemovedEventListener, this->getOwner());
@@ -42,7 +42,7 @@ void AI::onAdd()
 				auto state = RepeatForever::create(
 					Sequence::createWithTwoActions(
 						DelayTime::create(_aiSpeed),
-						CallFunc::create(CC_CALLBACK_0(AI::updateStep, this))
+						CallFunc::create(AX_CALLBACK_0(AI::updateStep, this))
 					)
 				);
 				_owner->runAction(state);
@@ -153,7 +153,7 @@ void AI::onGameObjectRemoved(cocos2d::EventCustom* eventCustom)
 
 		//_owner->runAction(Sequence::create(
 		//	DelayTime::create(1.0f),
-		//	CallFunc::create(CC_CALLBACK_0(AI::makeDecision, this)),
+		//	CallFunc::create(AX_CALLBACK_0(AI::makeDecision, this)),
 		//	nullptr
 		//));
 
@@ -301,7 +301,7 @@ void AI::thinkStart()
 		DelayTime::create(time),
 		CallFunc::create([owner]() { owner->setGridDirection(static_cast<GameObject::Direction>(random(0, 3))); }),
 		DelayTime::create(time),
-		CallFunc::create(CC_CALLBACK_0(AI::makeDecision, this)),
+		CallFunc::create(AX_CALLBACK_0(AI::makeDecision, this)),
 		nullptr
 	);
 

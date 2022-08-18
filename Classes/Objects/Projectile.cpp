@@ -24,7 +24,7 @@ bool Projectile::init()
 	_sprite = Sprite::createWithSpriteFrameName("projectile.png");
 	this->addChild(_sprite);
 
-	auto moving = Sequence::create(CallFunc::create(CC_CALLBACK_0(Projectile::onMoved, this))
+	auto moving = Sequence::create(CallFunc::create(AX_CALLBACK_0(Projectile::onMoved, this))
 		, DelayTime::create(PROJ_DELAY), nullptr);
 	_sprite->runAction(RepeatForever::create(moving));
 

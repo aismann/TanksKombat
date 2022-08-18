@@ -315,8 +315,8 @@ void GameplayScene::roundFinished(const Tank* winner)
 
 	message += highScore;
 
-	auto roundFinishedDialog = ModalDialog::create(message, CC_CALLBACK_0(GameplayScene::restartGame, this),
-		CC_CALLBACK_0(GameplayScene::leaveGame, this), "CONTINUE", "EXIT");
+	auto roundFinishedDialog = ModalDialog::create(message, AX_CALLBACK_0(GameplayScene::restartGame, this),
+		AX_CALLBACK_0(GameplayScene::leaveGame, this), "CONTINUE", "EXIT");
 	this->addChild(roundFinishedDialog, (int)LayerZOrder::MODAL_DIALOGS);
 }
 
@@ -353,7 +353,7 @@ void GameplayScene::backHomeDialog()
 	static ModalDialog* leaveDialog = nullptr;
 	if (leaveDialog == nullptr || !leaveDialog->isValid()) {
 		leaveDialog = ModalDialog::create("If you go back to home page, your current game will be lost, are you sure?",
-			CC_CALLBACK_0(GameplayScene::leaveGame, this), CC_CALLBACK_0(GameplayScene::backHomeDialogCanceled, this));
+			AX_CALLBACK_0(GameplayScene::leaveGame, this), AX_CALLBACK_0(GameplayScene::backHomeDialogCanceled, this));
 		leaveDialog->setReferencer(&leaveDialog);
 		this->addChild(leaveDialog, (int)LayerZOrder::MODAL_DIALOGS);
 	}
@@ -398,7 +398,7 @@ void GameplayScene::removeGameObject(GameObject* obj)
 	CCASSERT(_gameObjects.contains(obj), "Scene should contain the object");
 
 	ssize_t index = _gameObjects.getIndex(obj);
-	if (index != CC_INVALID_INDEX) {
+	if (index != AX_INVALID_INDEX) {
 		_gameObjects.erase(index);
 
 		Director::getInstance()->getEventDispatcher()->dispatchCustomEvent(GAME_OBJECT_REMOVED_EVENT, obj);

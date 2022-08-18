@@ -77,21 +77,21 @@ bool BaseScene::init(const Color4B& backgroundColor)
 
 	_eventListenerTouch = EventListenerTouchOneByOne::create();
 	_eventListenerTouch->setSwallowTouches(true);
-	_eventListenerTouch->onTouchBegan = CC_CALLBACK_2(BaseScene::onTouchBegan, this);
-	_eventListenerTouch->onTouchMoved = CC_CALLBACK_2(BaseScene::onTouchMoved, this);
-	_eventListenerTouch->onTouchEnded = CC_CALLBACK_2(BaseScene::onTouchEnded, this);
-	_eventListenerTouch->onTouchCancelled = CC_CALLBACK_2(BaseScene::onTouchCancelled, this);
+	_eventListenerTouch->onTouchBegan = AX_CALLBACK_2(BaseScene::onTouchBegan, this);
+	_eventListenerTouch->onTouchMoved = AX_CALLBACK_2(BaseScene::onTouchMoved, this);
+	_eventListenerTouch->onTouchEnded = AX_CALLBACK_2(BaseScene::onTouchEnded, this);
+	_eventListenerTouch->onTouchCancelled = AX_CALLBACK_2(BaseScene::onTouchCancelled, this);
 
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(_eventListenerTouch, this);
 
 	// creating a keyboard event listener
 	auto keyboardListener = EventListenerKeyboard::create();
-	keyboardListener->onKeyPressed = CC_CALLBACK_2(BaseScene::onKeyPressed, this);
-	keyboardListener->onKeyReleased = CC_CALLBACK_2(BaseScene::onKeyReleased, this);
+	keyboardListener->onKeyPressed = AX_CALLBACK_2(BaseScene::onKeyPressed, this);
+	keyboardListener->onKeyReleased = AX_CALLBACK_2(BaseScene::onKeyReleased, this);
 
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener, this);
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (AX_TARGET_PLATFORM == AX_PLATFORM_ANDROID || AX_TARGET_PLATFORM == AX_PLATFORM_IOS || AX_TARGET_PLATFORM == AX_PLATFORM_WINRT)
 	_onScreenJoystickLayer = Layer::create();
 	addChild(_onScreenJoystickLayer, 2);
 	addJoystick();

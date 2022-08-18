@@ -43,11 +43,11 @@ bool HighScoresScene::init()
 
 	//
 
-	auto continueItem = SimpleMenuItem::create("CONTINUE", FONT_MAIN, CC_CALLBACK_1(HighScoresScene::menuItemActivated, this));
+	auto continueItem = SimpleMenuItem::create("CONTINUE", FONT_MAIN, AX_CALLBACK_1(HighScoresScene::menuItemActivated, this));
 	continueItem->setTag(TAG_CONTINUE);
 	continueItem->setAnchorPoint(Vec2(0, 0.5f));
 
-	auto exitItem = SimpleMenuItem::create("EXIT", FONT_MAIN, CC_CALLBACK_1(HighScoresScene::menuItemActivated, this));
+	auto exitItem = SimpleMenuItem::create("EXIT", FONT_MAIN, AX_CALLBACK_1(HighScoresScene::menuItemActivated, this));
 	exitItem->setTag(TAG_EXIT);
 	exitItem->setAnchorPoint(Vec2(0, 0.5f));
 

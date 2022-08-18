@@ -7,9 +7,9 @@
 class SneakyJoystickSkinnedBase : public cocos2d::Layer
 {
 public:
-	CC_SYNTHESIZE_READONLY(cocos2d::Sprite*, backgroundSprite, BackgroundSprite);
-	CC_SYNTHESIZE_READONLY(cocos2d::Sprite*, thumbSprite, ThumbSprite);
-	CC_SYNTHESIZE_READONLY(SneakyJoystick*, joystick, Joystick);
+	AX_SYNTHESIZE_READONLY(cocos2d::Sprite*, backgroundSprite, BackgroundSprite);
+	AX_SYNTHESIZE_READONLY(cocos2d::Sprite*, thumbSprite, ThumbSprite);
+	AX_SYNTHESIZE_READONLY(SneakyJoystick*, joystick, Joystick);
 
 	CREATE_FUNC(SneakyJoystickSkinnedBase);
 	SneakyJoystickSkinnedBase();

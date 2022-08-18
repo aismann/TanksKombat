@@ -16,10 +16,10 @@ public:
 	bool isEqual(const ShortestPathStep* other) const;
 	std::string getDescription() const;
 
-	CC_SYNTHESIZE(Pos2, _position, Position);
-	CC_SYNTHESIZE(int, _gScore, GScore);
-	CC_SYNTHESIZE(int, _hScore, HScore);
-	CC_SYNTHESIZE(ShortestPathStep*, _parent, Parent);
+	AX_SYNTHESIZE(Pos2, _position, Position);
+	AX_SYNTHESIZE(int, _gScore, GScore);
+	AX_SYNTHESIZE(int, _hScore, HScore);
+	AX_SYNTHESIZE(ShortestPathStep*, _parent, Parent);
 };
 
 class Pathfinder : public cocos2d::Component

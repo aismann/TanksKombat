@@ -36,7 +36,7 @@ ModalDialog* ModalDialog::create(const std::string& content,
 		dialog->_callbackCancel = callbackCancel;
 		return dialog;
 	}
-	CC_SAFE_DELETE(dialog);
+	AX_SAFE_DELETE(dialog);
 	return nullptr;
 }
 
@@ -67,12 +67,12 @@ void ModalDialog::initOpt(const std::string& content, const std::string& okText,
 	this->addChild(_innerSprite);
 
 
-	SimpleMenuItem* okItem = SimpleMenuItem::create(" " + okText, FONT_MAIN, CC_CALLBACK_1(ModalDialog::menuItemActivated, this));
+	SimpleMenuItem* okItem = SimpleMenuItem::create(" " + okText, FONT_MAIN, AX_CALLBACK_1(ModalDialog::menuItemActivated, this));
 	okItem->setTag(TAG_OK);
 
 	SimpleMenuItem* cancelItem = nullptr;
 	if (!cancelText.empty()) {
-		cancelItem = SimpleMenuItem::create(" " + cancelText, FONT_MAIN, CC_CALLBACK_1(ModalDialog::menuItemActivated, this));
+		cancelItem = SimpleMenuItem::create(" " + cancelText, FONT_MAIN, AX_CALLBACK_1(ModalDialog::menuItemActivated, this));
 		cancelItem->setTag(TAG_CANCEL);
 	}
 
@@ -122,7 +122,7 @@ void ModalDialog::addEvents()
 {
 	KeyboardEventsFunc listener;
 	listener.onKeyPressed = nullptr;
-	listener.onKeyReleased = CC_CALLBACK_2(ModalDialog::onKeyReleased, this);
+	listener.onKeyReleased = AX_CALLBACK_2(ModalDialog::onKeyReleased, this);
 	_listenerId = BaseScene::getCurrentScene()->addKeyboardEvents(listener);
 }
 

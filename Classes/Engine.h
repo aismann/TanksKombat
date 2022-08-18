@@ -17,7 +17,7 @@ static const bool DISPLAY_STATS = false;
 
 static const float JOYSTICK_SCALE = 0.6f;
 
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WINRT
+#if AX_TARGET_PLATFORM == AX_PLATFORM_WINRT
 static const cocos2d::Point JOYSTICK_OFFSET = cocos2d::Point(40, 8);
 #else
 static const cocos2d::Point JOYSTICK_OFFSET = cocos2d::Point(8, 8);
@@ -51,9 +51,9 @@ static const int MAX_TEAMS_COUNT = 4;
 static const int GRID_MAX_WIDTH = 20;
 static const int GRID_MAX_HEIGHT = 14;
 
-//#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+//#if (AX_TARGET_PLATFORM == AX_PLATFORM_ANDROID)
 //#define stdp stdPatchForMinGW
-//#elif (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+//#elif (AX_TARGET_PLATFORM == AX_PLATFORM_WIN32)
 //#define stdp std
 //#else
 //#define stdp std
