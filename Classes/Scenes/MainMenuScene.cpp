@@ -102,7 +102,7 @@ void MainMenuScene::menuItemActivated(Ref* pSender)
 	onMenuItemActivated(pMenuItem->getTag());
 }
 
-void MainMenuScene::onKeyEvent(EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void MainMenuScene::onKeyEvent(EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	if (keyCode == EventKeyboard::KeyCode::KEY_BACK)
 	{

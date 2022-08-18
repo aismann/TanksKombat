@@ -142,7 +142,7 @@ void AI::makeDecision()
 	}
 }
 
-void AI::onGameObjectRemoved(cocos2d::EventCustom* eventCustom)
+void AI::onGameObjectRemoved(ax::EventCustom* eventCustom)
 {
 	auto gameObject = static_cast<GameObject*>(eventCustom->getUserData());
 	if (gameObject == _target)

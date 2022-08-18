@@ -8,7 +8,7 @@
 class Bonus;
 class EventCustom;
 
-class AI : public cocos2d::Component
+class AI : public ax::Component
 {
 public:
 	enum class States
@@ -32,7 +32,7 @@ private:
 	States _currentState = States::UNDEFINED;
 	GameObject* _target = nullptr;
 	Pos2 _escapePoint;
-	cocos2d::EventListenerCustom* _gameObjectRemovedEventListener;
+	ax::EventListenerCustom* _gameObjectRemovedEventListener;
 
 	float _aiSpeed = 0.5f;
 	float _chanceToEscape = 0.5f;
@@ -44,7 +44,7 @@ private:
 	void updateStep();
 	void makeDecision();
 
-	void onGameObjectRemoved(cocos2d::EventCustom* eventCustom);
+	void onGameObjectRemoved(ax::EventCustom* eventCustom);
 	bool isItPossibleToAttack();
 	bool isItPossibleToAttackEnemy(const Tank* enemy);
 	bool isItPossibleToAttackInDirection(Tank::Direction direction);

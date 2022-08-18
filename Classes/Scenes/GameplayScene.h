@@ -17,7 +17,7 @@ class GameplayScene : public BaseScene
 public:
 	CREATE_FUNC(GameplayScene);
 
-	static cocos2d::Scene* createScene();
+	static ax::Scene* createScene();
 
 	bool init() override;
 
@@ -33,16 +33,16 @@ public:
 	bool findRandomEmptyTile(Pos2& result, const Pos2& accessibleFrom);
 
 	LevelGrid* getGrid() const { return _levelGrid; }
-	const cocos2d::Vector<GameObject*>& getGameObjects() const { return _gameObjects; }
+	const ax::Vector<GameObject*>& getGameObjects() const { return _gameObjects; }
 
 	int getTankScore(Team team) const;
 
 private:
-	cocos2d::Vector<GameObject*> _gameObjects;
+	ax::Vector<GameObject*> _gameObjects;
 	LevelGrid* _levelGrid;
 	TiledSprite* _background;
 
-	cocos2d::Label* _statusLabel;
+	ax::Label* _statusLabel;
 
 	bool _paused;
 	int _highScores[MAX_TEAMS_COUNT]; //std array
@@ -61,8 +61,8 @@ private:
 	bool addRandomBonus(bool playSound = true);
 	void leaveGame();
 	void onTankKilled(Tank* tank);
-	void onKeyEvent(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event) override;
-	void onKeyPressed(cocos2d::EventKeyboard::KeyCode code, cocos2d::Event* event) override;
+	void onKeyEvent(ax::EventKeyboard::KeyCode keyCode, ax::Event* event) override;
+	void onKeyPressed(ax::EventKeyboard::KeyCode code, ax::Event* event) override;
 };
 
 #endif // __GAMEPLAYSCENE_H__

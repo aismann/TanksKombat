@@ -3,12 +3,12 @@
 
 #include "cocos2d.h"
 
-class TiledSprite : public cocos2d::Sprite
+class TiledSprite : public ax::Sprite
 {
 public:
-	static TiledSprite* createWithSprite(cocos2d::Sprite* sourceSprite, int width, int height);
+	static TiledSprite* createWithSprite(ax::Sprite* sourceSprite, int width, int height);
 private:
-	bool initWithTX(cocos2d::Sprite* sourceSprite, int width, int height);
+	bool initWithTX(ax::Sprite* sourceSprite, int width, int height);
 };
 
 #endif // _TILEDSPRITE_H_

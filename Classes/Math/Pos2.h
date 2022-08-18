@@ -27,7 +27,7 @@ public:
 		this->y = copy.y;
 	}
 
-	Pos2(const cocos2d::Point& copy)
+	Pos2(const ax::Point& copy)
 	{
 		this->x = copy.x;
 		this->y = copy.y;
@@ -97,9 +97,9 @@ public:
 		return x != p.x || y != p.y;
 	}
 
-	explicit operator cocos2d::Point() const
+	explicit operator ax::Point() const
 	{
-		return cocos2d::Point(x, y);
+		return ax::Point(x, y);
 	}
 
 	inline void set(int xx, int yy)
@@ -144,7 +144,7 @@ public:
 
 	std::string toString() const
 	{
-		return cocos2d::StringUtils::format("[ %d, %d ]", x, y);
+		return ax::StringUtils::format("[ %d, %d ]", x, y);
 	}
 };
 

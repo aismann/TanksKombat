@@ -16,9 +16,9 @@ public:
 	bool inUse() const;
 
 private:
-	static cocos2d::Vector<Explosion*> _explosionPool;
+	static ax::Vector<Explosion*> _explosionPool;
 
-	cocos2d::Animation* _animation;
+	ax::Animation* _animation;
 
 	Explosion();
 	~Explosion() override;

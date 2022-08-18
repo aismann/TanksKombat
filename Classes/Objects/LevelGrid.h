@@ -24,20 +24,20 @@ struct CAParams
 	int birthLimit = 5;
 };
 
-class LevelGrid : public cocos2d::Node
+class LevelGrid : public ax::Node
 {
 public:
 	static LevelGrid* createFromFile(const std::string& fileName);
-	static LevelGrid* createRandom(const cocos2d::Size& mapSize, float chanceToWall, float chanceToHole);
-	static LevelGrid* createUsingCA(const cocos2d::Size& mapSize, const CAParams& params, float chanceToWall);
+	static LevelGrid* createRandom(const ax::Size& mapSize, float chanceToWall, float chanceToHole);
+	static LevelGrid* createUsingCA(const ax::Size& mapSize, const CAParams& params, float chanceToWall);
 
-	inline const cocos2d::Size& getMapSize() const { return _mapSize; };
-	//inline void setMapSize(const cocos2d::Size& mapSize) { _mapSize = mapSize; };
-	inline const cocos2d::Size& getTileSize() const { return _tileSize; };
-	//inline void setTileSize(const cocos2d::Size& tileSize) { _tileSize = tileSize; };
+	inline const ax::Size& getMapSize() const { return _mapSize; };
+	//inline void setMapSize(const ax::Size& mapSize) { _mapSize = mapSize; };
+	inline const ax::Size& getTileSize() const { return _tileSize; };
+	//inline void setTileSize(const ax::Size& tileSize) { _tileSize = tileSize; };
 
-	Pos2 tileCoordForPosition(const cocos2d::Vec2& position) const;
-	cocos2d::Vec2 positionForTileCoord(const Pos2& tileCoord) const;
+	Pos2 tileCoordForPosition(const ax::Vec2& position) const;
+	ax::Vec2 positionForTileCoord(const Pos2& tileCoord) const;
 
 	TileValue getTile(int x, int y) const;
 	TileValue getTile(const Pos2& position) const;
@@ -52,19 +52,19 @@ public:
 
 	bool isTilePassable(const Pos2& tileCoord) const;
 	bool isValidTileCoord(const Pos2& tileCoord) const;
-	cocos2d::PointArray* walkableAdjacentTilesCoordForTileCoord(const Pos2& tileCoord) const;
+	ax::PointArray* walkableAdjacentTilesCoordForTileCoord(const Pos2& tileCoord) const;
 
 	void digPath(const Pos2& posA, const Pos2& posB);
 
 private:
 	LevelGrid();
-	LevelGrid(const cocos2d::Size& mapSize, const cocos2d::Size& tileSize);
+	LevelGrid(const ax::Size& mapSize, const ax::Size& tileSize);
 	~LevelGrid() override;
 
 	/** the map size property measured in tiles */
-	cocos2d::Size _mapSize;
+	ax::Size _mapSize;
 	/** the tile size property measured in pixels */
-	cocos2d::Size _tileSize;
+	ax::Size _tileSize;
 	//
 	std::vector<TileValue> _grid;
 	std::vector<PassableValue> _dynamicPassableLayer;

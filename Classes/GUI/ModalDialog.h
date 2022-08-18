@@ -5,7 +5,7 @@
 
 class SimpleMenu;
 
-class ModalDialog : public cocos2d::Sprite
+class ModalDialog : public ax::Sprite
 {
 public:
 	ModalDialog();
@@ -23,8 +23,8 @@ private:
 	int _listenerId;
 	ModalDialog** _referencer;
 
-	cocos2d::Label* _contentLabel;
-	cocos2d::Sprite* _innerSprite;
+	ax::Label* _contentLabel;
+	ax::Sprite* _innerSprite;
 	SimpleMenu* _menu;
 	std::string _okText;
 	std::string _cancelText;
@@ -32,11 +32,11 @@ private:
 	std::function<void(void)> _callbackCancel;
 
 	void addEvents();
-	bool onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+	bool onKeyReleased(ax::EventKeyboard::KeyCode keyCode, ax::Event* event);
 	void onEnter() override;
 	void onExit() override;
 	void initOpt(const std::string& content, const std::string& okText, const std::string& cancelText);
-	void menuItemActivated(cocos2d::Ref* pSender);
+	void menuItemActivated(ax::Ref* pSender);
 	void runAnimations(int menuItem, bool);
 };
 

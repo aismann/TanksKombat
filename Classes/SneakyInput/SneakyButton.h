@@ -3,13 +3,13 @@
 
 #include "cocos2d.h"
 
-class SneakyButton : public cocos2d::Node
+class SneakyButton : public ax::Node
 {
 protected:
-	cocos2d::Point center;
+	ax::Point center;
 	float radiusSq;
 
-	cocos2d::Rect bounds;
+	ax::Rect bounds;
 
 	AX_SYNTHESIZE(bool, status, Status);
 	AX_SYNTHESIZE_READONLY(bool, active, IsActive);
@@ -22,15 +22,15 @@ protected:
 
 	virtual void onEnterTransitionDidFinish() override;
 	virtual void onExit() override;
-	void initWithRect(const cocos2d::Rect& rect);
+	void initWithRect(const ax::Rect& rect);
 	void limiter(float delta);
 	void setRadius(float r);
-	virtual bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event);
-	virtual void onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event);
-	virtual void onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event);
-	virtual void onTouchCancelled(cocos2d::Touch *touch, cocos2d::Event *event);
+	virtual bool onTouchBegan(ax::Touch *touch, ax::Event *event);
+	virtual void onTouchMoved(ax::Touch *touch, ax::Event *event);
+	virtual void onTouchEnded(ax::Touch *touch, ax::Event *event);
+	virtual void onTouchCancelled(ax::Touch *touch, ax::Event *event);
 
-	cocos2d::EventListenerTouchOneByOne * _eventListenerTouch;
+	ax::EventListenerTouchOneByOne * _eventListenerTouch;
 };
 
 #endif

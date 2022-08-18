@@ -340,7 +340,7 @@ void GameplayScene::resumeGame()
 		obj->resume();
 }
 
-void GameplayScene::onKeyEvent(EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void GameplayScene::onKeyEvent(EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	if (keyCode == EventKeyboard::KeyCode::KEY_BACK)
 		backHomeDialog();

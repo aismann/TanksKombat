@@ -5,7 +5,7 @@
 
 class Engine;
 
-class GameObject : public cocos2d::Node
+class GameObject : public ax::Node
 {
 public:
 	enum class Type : int
@@ -25,10 +25,10 @@ public:
 	void setGridPosition(const Pos2& p);
 	void setGridPosition(int x, int y);
 
-	static Pos2 getGridPosition(const cocos2d::Node* node);
-	static void setGridPosition(cocos2d::Node* node, const Pos2& p);
-	static void setGridPosition(cocos2d::Node* node, int x, int y);
-	static void setGridDirection(cocos2d::Node* node, Direction direction);
+	static Pos2 getGridPosition(const ax::Node* node);
+	static void setGridPosition(ax::Node* node, const Pos2& p);
+	static void setGridPosition(ax::Node* node, int x, int y);
+	static void setGridDirection(ax::Node* node, Direction direction);
 	static Pos2 directionToOffset(Direction direction);
 	static Direction offsetToDirection(Pos2 offset);
 	static float directionToRotation(Direction direction);
@@ -37,7 +37,7 @@ public:
 	static void removeFromPassableLayer(const Pos2& pos);
 
 	AX_PROPERTY(Direction, _direction, GridDirection);
-	AX_PROPERTY(cocos2d::Sprite*, _sprite, Sprite);
+	AX_PROPERTY(ax::Sprite*, _sprite, Sprite);
 	AX_SYNTHESIZE_READONLY(Type, _type, Type);
 	AX_SYNTHESIZE(bool, _isPassable, Passable);
 

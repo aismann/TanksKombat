@@ -3,16 +3,16 @@
 
 #include "cocos2d.h"
 
-class SneakyJoystick : public cocos2d::Node
+class SneakyJoystick : public ax::Node
 {
 protected:
 	float joystickRadiusSq;
 	float thumbRadiusSq;
 	float deadRadiusSq;
 
-	AX_SYNTHESIZE_READONLY(cocos2d::Point, stickPosition, StickPosition);
+	AX_SYNTHESIZE_READONLY(ax::Point, stickPosition, StickPosition);
 	AX_SYNTHESIZE_READONLY(float, degrees, Degrees);
-	AX_SYNTHESIZE_READONLY(cocos2d::Point, velocity, Velocity);
+	AX_SYNTHESIZE_READONLY(ax::Point, velocity, Velocity);
 	AX_SYNTHESIZE(bool, autoCenter, AutoCenter);
 	AX_SYNTHESIZE_READONLY(bool, isDPad, IsDPad);
 	AX_SYNTHESIZE(bool, hasDeadzone, HasDeadzone);
@@ -25,22 +25,22 @@ protected:
 
 	~SneakyJoystick() override;
 
-	void initWithRect(const cocos2d::Rect& rect);
+	void initWithRect(const ax::Rect& rect);
 	void onEnterTransitionDidFinish() override;
 	void onExit() override;
 	void setIsDPad(bool b);
 	void setJoystickRadius(float r);
 	void setThumbRadius(float r);
 	void setDeadRadius(float r);
-	virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event);
+	virtual bool onTouchBegan(ax::Touch* touch, ax::Event* event);
+	virtual void onTouchMoved(ax::Touch* touch, ax::Event* event);
+	virtual void onTouchEnded(ax::Touch* touch, ax::Event* event);
+	virtual void onTouchCancelled(ax::Touch* touch, ax::Event* event);
 
 private:
-	void updateVelocity(cocos2d::Point point);
+	void updateVelocity(ax::Point point);
 
-	cocos2d::EventListenerTouchOneByOne* _eventListenerTouch;
+	ax::EventListenerTouchOneByOne* _eventListenerTouch;
 
 };
 #endif

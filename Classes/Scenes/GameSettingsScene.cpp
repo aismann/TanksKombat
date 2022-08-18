@@ -155,7 +155,7 @@ void GameSettingsScene::menuItemValueChanged(Ref* pSender)
 	}
 }
 
-void GameSettingsScene::onKeyEvent(EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void GameSettingsScene::onKeyEvent(EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	if (keyCode == EventKeyboard::KeyCode::KEY_BACK)
 		CHANGE_SCENE(MainMenuScene)

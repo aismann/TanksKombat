@@ -40,7 +40,7 @@ bool AboutScene::init()
 		"zironid_n, M-Tee\n"
 		"Kenney Vleugels\n\n"
 		"3d party code:\n\n"
-		"Cocos2d-x 3.9, SneakyInput";
+		"axys, SneakyInput";
 
 	const char* aboutYellow =
 		"Programming and game design:\n\n"

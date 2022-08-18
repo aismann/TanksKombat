@@ -3,7 +3,7 @@
 
 #include "Engine.h"
 
-class ShortestPathStep : public cocos2d::Ref
+class ShortestPathStep : public ax::Ref
 {
 public:
 	ShortestPathStep();
@@ -22,7 +22,7 @@ public:
 	AX_SYNTHESIZE(ShortestPathStep*, _parent, Parent);
 };
 
-class Pathfinder : public cocos2d::Component
+class Pathfinder : public ax::Component
 {
 public:
 	const static std::string COMPONENT_NAME;
@@ -30,11 +30,11 @@ public:
 	CREATE_FUNC(Pathfinder);
 
 	bool isPathExist(const Pos2& from, const Pos2& to, bool getUpClose = false);
-	const cocos2d::Vector<ShortestPathStep*>& getShortestPath(const Pos2& from, const Pos2& to, bool getUpClose = false);
+	const ax::Vector<ShortestPathStep*>& getShortestPath(const Pos2& from, const Pos2& to, bool getUpClose = false);
 private:
-	cocos2d::Vector<ShortestPathStep*> _spOpenSteps;
-	cocos2d::Vector<ShortestPathStep*> _spClosedSteps;
-	cocos2d::Vector<ShortestPathStep*> _moveTowardPath;
+	ax::Vector<ShortestPathStep*> _spOpenSteps;
+	ax::Vector<ShortestPathStep*> _spClosedSteps;
+	ax::Vector<ShortestPathStep*> _moveTowardPath;
 
 	Pathfinder();
 	~Pathfinder() override;
@@ -42,7 +42,7 @@ private:
 	void insertInOpenSteps(ShortestPathStep* step);
 	static int computeHScoreFromCoordToCoord(const Pos2& from, const Pos2& to);
 	static int costToMoveFromStepToAdjacentStep(const ShortestPathStep* fromStep, const ShortestPathStep* toStep);
-	static ssize_t getStepIndex(const cocos2d::Vector<ShortestPathStep*>& steps, const ShortestPathStep* step);
+	static ssize_t getStepIndex(const ax::Vector<ShortestPathStep*>& steps, const ShortestPathStep* step);
 
 	ShortestPathStep* constructPath(const Pos2& from, const Pos2& to, bool getUpClose = false);
 };

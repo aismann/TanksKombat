@@ -4,7 +4,7 @@
 #include "cocos2d.h"
 #include "SimpleMenuItem.h"
 
-class SimpleMenu : public cocos2d::Menu
+class SimpleMenu : public ax::Menu
 {
 public:
 	friend SimpleMenuItem;
@@ -18,7 +18,7 @@ public:
 
 #if (AX_TARGET_PLATFORM == AX_PLATFORM_WINRT)
 	// VS2013 does not support nullptr in variable args lists and variadic templates are also not supported.
-	typedef cocos2d::MenuItem* M;
+	typedef ax::MenuItem* M;
 	static SimpleMenu* create(Type type, M m1, std::nullptr_t listEnd) { return variadicCreate(type, m1, NULL); }
 	static SimpleMenu* create(Type type, M m1, M m2, std::nullptr_t listEnd) { return variadicCreate(type, m1, m2, NULL); }
 	static SimpleMenu* create(Type type, M m1, M m2, M m3, std::nullptr_t listEnd) { return variadicCreate(type, m1, m2, m3, NULL); }
@@ -31,13 +31,13 @@ public:
 	static SimpleMenu* create(Type type, M m1, M m2, M m3, M m4, M m5, M m6, M m7, M m8, M m9, M m10, std::nullptr_t listEnd) { return variadicCreate(type, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, NULL); }
 
 	// On WP8 for lists longer than 10 items, use createWithArray or variadicCreate with NULL as the last argument.
-	static SimpleMenu* variadicCreate(Type type, cocos2d::MenuItem* item, ...);
+	static SimpleMenu* variadicCreate(Type type, ax::MenuItem* item, ...);
 #else
-	static SimpleMenu* create(Type type, cocos2d::MenuItem* item, ...) AX_REQUIRES_NULL_TERMINATION;
+	static SimpleMenu* create(Type type, ax::MenuItem* item, ...) AX_REQUIRES_NULL_TERMINATION;
 #endif
 
-	static SimpleMenu* createWithArray(Type type, const cocos2d::Vector<cocos2d::MenuItem*>& arrayOfItems);
-	static SimpleMenu* createWithItems(Type type, cocos2d::MenuItem* firstItem, va_list args);
+	static SimpleMenu* createWithArray(Type type, const ax::Vector<ax::MenuItem*>& arrayOfItems);
+	static SimpleMenu* createWithItems(Type type, ax::MenuItem* firstItem, va_list args);
 
 	SimpleMenu();
 	~SimpleMenu() override;
@@ -57,9 +57,9 @@ private:
 	SimpleMenuItem* _currentMenuItem;
 	Type _type;
 
-	std::function<void(cocos2d::Ref*)> _onItemChanged;
+	std::function<void(ax::Ref*)> _onItemChanged;
 
-	bool onKeyPressed2(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+	bool onKeyPressed2(ax::EventKeyboard::KeyCode keyCode, ax::Event* event);
 	void initOpt(Type type);
 
 	void updateMenuItems(SimpleMenuItem* menuItem);

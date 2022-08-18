@@ -18,12 +18,12 @@ static const bool DISPLAY_STATS = false;
 static const float JOYSTICK_SCALE = 0.6f;
 
 #if AX_TARGET_PLATFORM == AX_PLATFORM_WINRT
-static const cocos2d::Point JOYSTICK_OFFSET = cocos2d::Point(40, 8);
+static const ax::Point JOYSTICK_OFFSET = ax::Point(40, 8);
 #else
-static const cocos2d::Point JOYSTICK_OFFSET = cocos2d::Point(8, 8);
+static const ax::Point JOYSTICK_OFFSET = ax::Point(8, 8);
 #endif
 
-static const cocos2d::Point FIRE_BUTTON_OFFSET = cocos2d::Point(8, 48);
+static const ax::Point FIRE_BUTTON_OFFSET = ax::Point(8, 48);
 
 #define FONT_MAIN "fonts/main_font.png", 17, 16, ' '
 #define FONT_LOGO "fonts/logo_font.png", 32, 32, ' '
@@ -44,8 +44,8 @@ static const char* UD_SOUND_VOLUME = "soundVolume";
 static const char* UD_MUSIC_ENABLED = "musicEnabled";
 static const char* UD_SOUND_ENABLED = "soundEnabled";
 
-static const cocos2d::Color3B LIGHTGREEN_COLOR = cocos2d::Color3B(66, 99, 0);
-static const cocos2d::Color3B DARKGREEN_COLOR = cocos2d::Color3B(20, 30, 20);
+static const ax::Color3B LIGHTGREEN_COLOR = ax::Color3B(66, 99, 0);
+static const ax::Color3B DARKGREEN_COLOR = ax::Color3B(20, 30, 20);
 
 static const int MAX_TEAMS_COUNT = 4;
 static const int GRID_MAX_WIDTH = 20;
@@ -64,23 +64,23 @@ static const char* BACKGROUND_MUSIC = "music/main.ogg";
 struct TouchEventsFunc
 {
 	int id;
-	std::function<bool(cocos2d::Touch*, cocos2d::Event*)> onTouchBegan;
-	std::function<void(cocos2d::Touch*, cocos2d::Event*)> onTouchMoved;
-	std::function<void(cocos2d::Touch*, cocos2d::Event*)> onTouchEnded;
-	std::function<void(cocos2d::Touch*, cocos2d::Event*)> onTouchCancelled;
+	std::function<bool(ax::Touch*, ax::Event*)> onTouchBegan;
+	std::function<void(ax::Touch*, ax::Event*)> onTouchMoved;
+	std::function<void(ax::Touch*, ax::Event*)> onTouchEnded;
+	std::function<void(ax::Touch*, ax::Event*)> onTouchCancelled;
 };
 
 struct KeyboardEventsFunc
 {
 	int id;
-	std::function<bool(cocos2d::EventKeyboard::KeyCode, cocos2d::Event*)> onKeyPressed;
-	std::function<bool(cocos2d::EventKeyboard::KeyCode, cocos2d::Event*)> onKeyReleased;
+	std::function<bool(ax::EventKeyboard::KeyCode, ax::Event*)> onKeyPressed;
+	std::function<bool(ax::EventKeyboard::KeyCode, ax::Event*)> onKeyReleased;
 };
 
 struct Settings
 {
 	bool fullscreen;
-	cocos2d::Size windowsSize;
+	ax::Size windowsSize;
 
 	int musicVolume;
 	int soundVolume;
@@ -122,8 +122,8 @@ struct GameMode
 	float newBonusTime = 5.0f;
 	int ammoInBonus = 10;
 
-	static GameMode createFromDict(const cocos2d::ValueMap& dict);
-	void writeToDict(cocos2d::ValueMap& dict) const;
+	static GameMode createFromDict(const ax::ValueMap& dict);
+	void writeToDict(ax::ValueMap& dict) const;
 };
 
 enum class LayerZOrder
@@ -136,9 +136,9 @@ enum class Team
 	RED = 0, BLUE, GREEN, YELLOW
 };
 
-const std::array<cocos2d::Color3B, MAX_TEAMS_COUNT> teamColors = {
-	cocos2d::Color3B(255, 128, 128), cocos2d::Color3B(128, 128, 255),
-	cocos2d::Color3B(255, 128, 255), cocos2d::Color3B(255, 255, 128)
+const std::array<ax::Color3B, MAX_TEAMS_COUNT> teamColors = {
+	ax::Color3B(255, 128, 128), ax::Color3B(128, 128, 255),
+	ax::Color3B(255, 128, 255), ax::Color3B(255, 255, 128)
 };
 
 enum class TankAction
@@ -146,7 +146,7 @@ enum class TankAction
 	MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, FIRE
 };
 
-using KeyMap = std::map<cocos2d::EventKeyboard::KeyCode, TankAction>;
+using KeyMap = std::map<ax::EventKeyboard::KeyCode, TankAction>;
 
 class BaseScene;
 
@@ -182,15 +182,15 @@ public:
 	std::vector<std::string> getGameModes() const;
 	void setGameMode(const std::string& modeName);
 
-	void setEnableRecursiveCascading(cocos2d::Node* node, bool enable);
+	void setEnableRecursiveCascading(ax::Node* node, bool enable);
 
-	bool isActionExist(Team team, cocos2d::EventKeyboard::KeyCode code) const;
-	TankAction getActionForKey(Team team, cocos2d::EventKeyboard::KeyCode code) const;
+	bool isActionExist(Team team, ax::EventKeyboard::KeyCode code) const;
+	TankAction getActionForKey(Team team, ax::EventKeyboard::KeyCode code) const;
 private:
 	static Engine* _instance;
 
-	cocos2d::ValueMap _modes;
-	cocos2d::SpriteBatchNode* _spriteBatch;
+	ax::ValueMap _modes;
+	ax::SpriteBatchNode* _spriteBatch;
 	int _bgMusicId = -1;
 
 	std::array<KeyMap, MAX_TEAMS_COUNT> _keymaps;

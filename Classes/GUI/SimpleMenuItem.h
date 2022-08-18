@@ -3,13 +3,13 @@
 
 #include "cocos2d.h"
 
-class SimpleMenuItem : public cocos2d::MenuItemAtlasFont
+class SimpleMenuItem : public ax::MenuItemAtlasFont
 {
 public:
 	static SimpleMenuItem* create();
-	static SimpleMenuItem* create(const cocos2d::ccMenuCallback& callback);
+	static SimpleMenuItem* create(const ax::ccMenuCallback& callback);
 	static SimpleMenuItem* create(const std::string& value, const std::string& charMapFile, int itemWidth, int itemHeight, char startCharMap);
-	static SimpleMenuItem* create(const std::string& value, const std::string& charMapFile, int itemWidth, int itemHeight, char startCharMap, const cocos2d::ccMenuCallback& menuItemActivate);
+	static SimpleMenuItem* create(const std::string& value, const std::string& charMapFile, int itemWidth, int itemHeight, char startCharMap, const ax::ccMenuCallback& menuItemActivate);
 
 	void activate() override;
 
@@ -29,12 +29,12 @@ public:
 	}
 	void setCurrentValueIndex(int index);
 
-	void setValueChangedCallback(const cocos2d::ccMenuCallback& onValueChanged)
+	void setValueChangedCallback(const ax::ccMenuCallback& onValueChanged)
 	{
 		_onValueChanged = onValueChanged;
 	}
 
-	void setActivateCallback(const cocos2d::ccMenuCallback& menuItemActivate)
+	void setActivateCallback(const ax::ccMenuCallback& menuItemActivate)
 	{
 		setCallback(menuItemActivate);
 	}
@@ -51,7 +51,7 @@ private:
 	bool _isCurrent;
 	std::string _originalString;
 	std::vector<std::string> _values;
-	cocos2d::ccMenuCallback _onValueChanged;
+	ax::ccMenuCallback _onValueChanged;
 
 	void updateLabel();
 };

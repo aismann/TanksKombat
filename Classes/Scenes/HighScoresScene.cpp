@@ -78,7 +78,7 @@ void HighScoresScene::onMenuItemActivated(int menuItem)
 	}
 }
 
-void HighScoresScene::onKeyEvent(EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void HighScoresScene::onKeyEvent(EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	// CHANGE_SCENE(HighScoresScene);
 

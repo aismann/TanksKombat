@@ -126,7 +126,7 @@ void ModalDialog::addEvents()
 	_listenerId = BaseScene::getCurrentScene()->addKeyboardEvents(listener);
 }
 
-bool ModalDialog::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+bool ModalDialog::onKeyReleased(ax::EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	if (keyCode == EventKeyboard::KeyCode::KEY_BACK) {
 		event->stopPropagation(); // avoid exit on WINRT
@@ -145,7 +145,7 @@ void ModalDialog::menuItemActivated(Ref* pSender)
 void ModalDialog::runAnimations(int menuItem, bool bReverse)
 {
 	this->runAction(bReverse ? ScaleBy::create(0.4f, 1 / 10.0f) : ScaleBy::create(0.4f, 10.0f));
-	cocos2d::Action* fade;
+	ax::Action* fade;
 	if (bReverse)
 		fade = FadeOut::create(0.4f);
 	else

@@ -19,33 +19,33 @@ else \
 
 class JoystickWithSimulator : public SneakyJoystick
 {
-	cocos2d::EventKeyboard::KeyCode getKeyCodeFromVelocity() const;
-	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) override;
-	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event) override;
+	ax::EventKeyboard::KeyCode getKeyCodeFromVelocity() const;
+	bool onTouchBegan(ax::Touch* touch, ax::Event* event) override;
+	void onTouchEnded(ax::Touch* touch, ax::Event* event) override;
 };
 
 //
 
 class ButtonWithSimulator : public SneakyButton
 {
-	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) override;
-	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event) override;
+	bool onTouchBegan(ax::Touch* touch, ax::Event* event) override;
+	void onTouchEnded(ax::Touch* touch, ax::Event* event) override;
 };
 
 //
 
-class BaseScene : public cocos2d::LayerColor
+class BaseScene : public ax::LayerColor
 {
 public:
 	BaseScene();
-	virtual bool init(const cocos2d::Color4B& backgroundColor);
-	virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event);
-	virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
-	virtual void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
-	virtual void onKeyEvent(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+	virtual bool init(const ax::Color4B& backgroundColor);
+	virtual bool onTouchBegan(ax::Touch* touch, ax::Event* event);
+	virtual void onTouchMoved(ax::Touch* touch, ax::Event* event);
+	virtual void onTouchEnded(ax::Touch* touch, ax::Event* event);
+	virtual void onTouchCancelled(ax::Touch* touch, ax::Event* event);
+	virtual void onKeyPressed(ax::EventKeyboard::KeyCode keyCode, ax::Event* event);
+	virtual void onKeyReleased(ax::EventKeyboard::KeyCode keyCode, ax::Event* event);
+	virtual void onKeyEvent(ax::EventKeyboard::KeyCode keyCode, ax::Event* event);
 	static BaseScene* getCurrentScene();
 
 	int addKeyboardEvents(KeyboardEventsFunc touchEvent);
@@ -60,9 +60,9 @@ protected:
 private:
 	std::deque<TouchEventsFunc> _touchEvents;
 	std::deque<KeyboardEventsFunc> _keyboardEvents;
-	cocos2d::EventListenerTouchOneByOne* _eventListenerTouch;
+	ax::EventListenerTouchOneByOne* _eventListenerTouch;
 
-	cocos2d::Layer* _onScreenJoystickLayer;
+	ax::Layer* _onScreenJoystickLayer;
 };
 
 #endif // __BASE_SCENE_H__

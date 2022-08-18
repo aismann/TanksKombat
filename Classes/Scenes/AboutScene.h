@@ -6,16 +6,16 @@
 class AboutScene : public BaseScene
 {
 public:
-	static cocos2d::Scene* createScene();
+	static ax::Scene* createScene();
 	AboutScene();
 	bool init() override;
 	CREATE_FUNC(AboutScene);
 
 private:
-	void onKeyPressed(cocos2d::EventKeyboard::KeyCode code, cocos2d::Event* event) override;
+	void onKeyPressed(ax::EventKeyboard::KeyCode code, ax::Event* event) override;
 	void showDebugInfo();
-	cocos2d::Label* _content;
-	cocos2d::Label* _content2;
+	ax::Label* _content;
+	ax::Label* _content2;
 };
 
 #endif // __ABOUT_SCENE_H__

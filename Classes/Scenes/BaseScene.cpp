@@ -4,7 +4,7 @@
 USING_NS_CC;
 
 
-cocos2d::EventKeyboard::KeyCode JoystickWithSimulator::getKeyCodeFromVelocity() const
+ax::EventKeyboard::KeyCode JoystickWithSimulator::getKeyCodeFromVelocity() const
 {
 	EventKeyboard::KeyCode code = EventKeyboard::KeyCode::KEY_UP_ARROW;
 	if (getVelocity().y > 0.5f)
@@ -30,7 +30,7 @@ bool JoystickWithSimulator::onTouchBegan(Touch* touch, Event* event)
 	return false;
 }
 
-void JoystickWithSimulator::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+void JoystickWithSimulator::onTouchEnded(ax::Touch* touch, ax::Event* event)
 {
 	EventKeyboard simEvent(getKeyCodeFromVelocity(), false);
 	_eventDispatcher->dispatchEvent(&simEvent);
@@ -47,7 +47,7 @@ bool ButtonWithSimulator::onTouchBegan(Touch* touch, Event* event)
 	return false;
 }
 
-void ButtonWithSimulator::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+void ButtonWithSimulator::onTouchEnded(ax::Touch* touch, ax::Event* event)
 {
 	SneakyButton::onTouchEnded(touch, event);
 
@@ -106,7 +106,7 @@ void BaseScene::onExit()
 	LayerColor::onExit();
 }
 
-void BaseScene::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void BaseScene::onKeyPressed(ax::EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	for (const auto& ev : _keyboardEvents)
 	{
@@ -115,7 +115,7 @@ void BaseScene::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::E
 	}
 }
 
-void BaseScene::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void BaseScene::onKeyReleased(ax::EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 	if (keyCode == EventKeyboard::KeyCode::KEY_BACK)
 		event->stopPropagation(); // avoid exit on WINRT
@@ -129,11 +129,11 @@ void BaseScene::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::
 	onKeyEvent(keyCode, event);
 }
 
-void BaseScene::onKeyEvent(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
+void BaseScene::onKeyEvent(ax::EventKeyboard::KeyCode keyCode, ax::Event* event)
 {
 }
 
-bool BaseScene::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
+bool BaseScene::onTouchBegan(ax::Touch* touch, ax::Event* event)
 {
 	for (const auto& ev : _touchEvents)
 	{
@@ -153,7 +153,7 @@ void BaseScene::onTouchMoved(Touch* touch, Event* event)
 	}
 }
 
-void BaseScene::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+void BaseScene::onTouchEnded(ax::Touch* touch, ax::Event* event)
 {
 	for (const auto& ev : _touchEvents)
 	{
@@ -162,7 +162,7 @@ void BaseScene::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 	}
 }
 
-void BaseScene::onTouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event)
+void BaseScene::onTouchCancelled(ax::Touch* touch, ax::Event* event)
 {
 	for (const auto& ev : _touchEvents)
 	{

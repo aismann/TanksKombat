@@ -34,7 +34,7 @@ public:
 	bool isFallIntoHoleState() const;
 	bool isMoveTowardState();
 	Pos2 getMoveTowardTarget() const;
-	const cocos2d::Vector<ShortestPathStep*>& getMoveTowardPath() const { return _moveTowardPath; }
+	const ax::Vector<ShortestPathStep*>& getMoveTowardPath() const { return _moveTowardPath; }
 	bool isAIEnabled();
 	void setAIEnabled(bool enabled);
 
@@ -46,14 +46,14 @@ private:
 	int _lives;
 	int _ammo;
 	Team _team;
-	std::map<Direction, cocos2d::Action*> _idleStates;
-	cocos2d::Action* _shotState;
-	cocos2d::Action* _moveTowardState;
-	cocos2d::Sprite* _shot;
+	std::map<Direction, ax::Action*> _idleStates;
+	ax::Action* _shotState;
+	ax::Action* _moveTowardState;
+	ax::Sprite* _shot;
 	Pos2 _prevPosition;
 
-	cocos2d::Vector<ShortestPathStep*> _moveTowardPath;
-	cocos2d::DrawNode* _debugPathLine;
+	ax::Vector<ShortestPathStep*> _moveTowardPath;
+	ax::DrawNode* _debugPathLine;
 
 	const float _moveTowardStepDelay = 0.2f;
 
@@ -75,7 +75,7 @@ private:
 
 	void respawnIntoPosition(Pos2 position);
 
-	static cocos2d::Action* createIdleAction(Direction direction, const std::string& frame);
+	static ax::Action* createIdleAction(Direction direction, const std::string& frame);
 
 	void shotAnimationStarted();
 	void shotAnimationFinished();

@@ -1,20 +1,20 @@
 #ifndef __MAINMENUSCENE_H__
 #define __MAINMENUSCENE_H__
 
-#include "cocos2d.h"
+#include "axys.h"
 #include "BaseScene.h"
 
 class MainMenuScene : public BaseScene
 {
 public:
-	static cocos2d::Scene* createScene();
+	static ax::Scene* createScene();
 	bool init() override;
 
 	CREATE_FUNC(MainMenuScene);
 
 private:
-	void onKeyEvent(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event) override;
-	void menuItemActivated(cocos2d::Ref* pSender);
+	void onKeyEvent(ax::EventKeyboard::KeyCode keyCode, ax::Event* event) override;
+	void menuItemActivated(ax::Ref* pSender);
 	void onMenuItemActivated(int menuItem);
 	void exitGame();
 };

@@ -5,7 +5,7 @@
 
 USING_NS_CC;
 
-cocos2d::Vector<Explosion*> Explosion::_explosionPool;
+ax::Vector<Explosion*> Explosion::_explosionPool;
 
 
 Explosion::Explosion()

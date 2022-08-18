@@ -7,14 +7,14 @@
 class SettingsScene : public BaseScene
 {
 public:
-	static cocos2d::Scene* createScene();
+	static ax::Scene* createScene();
 	bool init() override;
 	void onExit() override;
 	CREATE_FUNC(SettingsScene);
 
 private:
-	void onKeyEvent(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event) override;
-	void menuItemActivated(cocos2d::Ref* pSender);
+	void onKeyEvent(ax::EventKeyboard::KeyCode keyCode, ax::Event* event) override;
+	void menuItemActivated(ax::Ref* pSender);
 	void menuItemValueChanged(Ref* pSender);
 	void onMenuItemActivated(int menuItem);
 };
