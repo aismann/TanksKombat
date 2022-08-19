@@ -1,7 +1,7 @@
 #ifndef _SIMPLEMENU_H_
 #define _SIMPLEMENU_H_
 
-#include "cocos2d.h"
+#include "axys.h"
 #include "SimpleMenuItem.h"
 
 class SimpleMenu : public ax::Menu

@@ -2,7 +2,7 @@
 #include "Engine.h"
 #include "Scenes\GameplayScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 const std::string Pathfinder::COMPONENT_NAME = "Pathfinder";
 
@@ -94,17 +94,17 @@ ShortestPathStep* Pathfinder::constructPath(const Pos2& from, const Pos2& to, bo
 
 	if (from == to)
 	{
-		CCLOG("You're already there!");
+		AXLOG("You're already there!");
 		return nullptr;
 	}
 
 	if (!scene->getGrid()->isValidTileCoord(to) || !scene->getGrid()->isTilePassable(to))
 	{
-		CCLOG("Tile unwalkable!");
+		AXLOG("Tile unwalkable!");
 		return nullptr;
 	}
 
-	// CCLOG("From: %d, %d - To: %d, %d", from.x, from.y, to.x, to.y);
+	// AXLOG("From: %d, %d - To: %d, %d", from.x, from.y, to.x, to.y);
 
 	_spOpenSteps.clear();
 	_spClosedSteps.clear();

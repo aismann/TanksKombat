@@ -7,7 +7,7 @@
 #include "Components\Pathfinder.h"
 #include "Components\AI.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 #define SHOT_STATE_TAG 10
 #define GHOST_STATE_TAG 11
@@ -598,13 +598,13 @@ Pos2 Tank::getMoveTowardTarget() const
 
 void Tank::updateMoveTowardState()
 {
-	CCASSERT(!_moveTowardPath.empty(), "_moveTowardPath.size() == 0");
+	AXASSERT(!_moveTowardPath.empty(), "_moveTowardPath.size() == 0");
 
 	auto from = getGridPosition();
 	auto to = _moveTowardPath.at(0)->getPosition();
 	auto offset = to - from;
 
-	//CCASSERT(to != from, "There is no direction for null offset!");
+	//AXASSERT(to != from, "There is no direction for null offset!");
 	if (to == from)
 		return; // There is no direction for null offset!
 
@@ -634,7 +634,7 @@ void Tank::respawnIntoPosition(Pos2 position)
 
 void Tank::damage(bool ghostState)
 {
-	CCASSERT(getLives() > 0, "getLives() <= 0");
+	AXASSERT(getLives() > 0, "getLives() <= 0");
 
 	setLives(getLives() - 1);
 

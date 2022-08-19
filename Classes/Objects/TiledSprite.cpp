@@ -1,6 +1,6 @@
 #include "TiledSprite.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 TiledSprite* TiledSprite::createWithSprite(Sprite* sourceSprite, int width, int height)
 {

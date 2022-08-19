@@ -1,7 +1,7 @@
 #ifndef __JOYSTICK_SKINNED_H__
 #define __JOYSTICK_SKINNED_H__
 
-#include "cocos2d.h"
+#include "axys.h"
 #include "SneakyJoystick.h"
 
 class SneakyJoystickSkinnedBase : public ax::Layer

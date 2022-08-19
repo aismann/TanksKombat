@@ -4,7 +4,7 @@
 #include "2d/CCFontAtlasCache.h"
 #include "audio/AudioEngine.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 GameMode GameMode::createFromDict(const ValueMap& dict)
 {
@@ -35,7 +35,7 @@ Engine* Engine::getInstance()
 	if (!_instance)
 	{
 		_instance = new (std::nothrow) Engine();
-		CCASSERT(_instance, "FATAL: Not enough memory");
+		AXASSERT(_instance, "FATAL: Not enough memory");
 	}
 
 	return _instance;
@@ -76,7 +76,7 @@ void Engine::launchGame()
 		director->setOpenGLView(glview);
 	}
 
-	director->setDisplayStats(DISPLAY_STATS);
+	director->setStatsDisplay(DISPLAY_STATS);
 	director->setAnimationInterval(1.0f / 60.0f);
 	glview->setDesignResolutionSize(DESIGN_WIDTH, DESIGN_HEIGHT, ResolutionPolicy::FIXED_HEIGHT);
 

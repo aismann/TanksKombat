@@ -1,7 +1,7 @@
 #ifndef __GAMEPLAYSCENE_H__
 #define __GAMEPLAYSCENE_H__
 
-#include "cocos2d.h"
+#include "axys.h"
 #include "BaseScene.h"
 #include "Objects/Tank.h"
 

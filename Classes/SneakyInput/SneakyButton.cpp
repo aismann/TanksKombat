@@ -1,6 +1,6 @@
 #include "SneakyButton.h"
 
-using namespace cocos2d;
+using namespace axys;
 
 void SneakyButton::onEnterTransitionDidFinish()
 {

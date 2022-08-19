@@ -3,7 +3,7 @@
 #include "Objects\Explosion.h"
 #include "Scenes\GameplayScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 Bonus::Bonus()
 	: GameObject(Type::BONUS)

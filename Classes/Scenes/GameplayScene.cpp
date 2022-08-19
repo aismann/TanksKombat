@@ -8,7 +8,7 @@
 #include "Components\Pathfinder.h"
 
 
-USING_NS_CC;
+USING_NS_AX;
 
 Scene* GameplayScene::createScene()
 {
@@ -385,7 +385,7 @@ void GameplayScene::onKeyPressed(EventKeyboard::KeyCode code, Event* event)
 
 void GameplayScene::addGameObject(GameObject* obj)
 {
-	CCASSERT(obj != nullptr, "Argument must be non-nil");
+	AXASSERT(obj != nullptr, "Argument must be non-nil");
 
 	_gameObjects.pushBack(obj);
 	_levelGrid->addChild(obj, (int)LayerZOrder::OBJECTS);
@@ -395,7 +395,7 @@ void GameplayScene::addGameObject(GameObject* obj)
 
 void GameplayScene::removeGameObject(GameObject* obj)
 {
-	CCASSERT(_gameObjects.contains(obj), "Scene should contain the object");
+	AXASSERT(_gameObjects.contains(obj), "Scene should contain the object");
 
 	ssize_t index = _gameObjects.getIndex(obj);
 	if (index != AX_INVALID_INDEX) {

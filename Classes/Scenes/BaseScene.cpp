@@ -1,7 +1,7 @@
-#include "cocos2d.h"
+#include "axys.h"
 #include "BaseScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 
 ax::EventKeyboard::KeyCode JoystickWithSimulator::getKeyCodeFromVelocity() const

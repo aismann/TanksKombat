@@ -1,6 +1,6 @@
 #include "SneakyJoystick.h"
 
-using namespace cocos2d;
+using namespace axys;
 
 #define SJ_PI 3.14159265359f
 #define SJ_PI_X_2 6.28318530718f

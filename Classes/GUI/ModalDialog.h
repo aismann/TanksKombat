@@ -1,7 +1,7 @@
 #ifndef _MODALDIALOG_H_
 #define _MODALDIALOG_H_
 
-#include "cocos2d.h"
+#include "axys.h"
 
 class SimpleMenu;
 

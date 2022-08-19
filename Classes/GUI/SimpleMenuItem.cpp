@@ -1,9 +1,9 @@
-#include "cocos2d.h"
+#include "axys.h"
 #include "Engine.h"
 #include "SimpleMenu.h"
 #include "SimpleMenuItem.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 
 SimpleMenuItem* SimpleMenuItem::create()
@@ -58,7 +58,7 @@ void SimpleMenuItem::setCurrentValue(const std::string& value)
 
 void SimpleMenuItem::setCurrentValueIndex(int index)
 {
-	CCASSERT(index >= 0 && index < (int)_values.size(), "index out of range");
+	AXASSERT(index >= 0 && index < (int)_values.size(), "index out of range");
 
 	_currentValue = index;
 	onValueChanged(false);

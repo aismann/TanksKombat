@@ -5,7 +5,7 @@
 #include "GUI\ModalDialog.h"
 #include "GUI\SimpleMenu.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 #define TAG_NEW_GAME	0
 #define TAG_OPTIONS		1

@@ -6,7 +6,7 @@
 #include "Scenes\GameplayScene.h"
 #include "base/CCEventListenerCustom.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 const std::string AI::COMPONENT_NAME = "AI";
 
@@ -84,7 +84,7 @@ void AI::updateStep()
 
 void AI::makeDecision()
 {
-	CCLOG("AI::makeDecision()");
+	AXLOG("AI::makeDecision()");
 
 	// If enemy on the line, it is possible to attack.
 	//	 - Attack.
@@ -192,7 +192,7 @@ void AI::pursuitStart(Tank* target)
 	_currentState = States::PURSUIT;
 	_target = target;
 
-	CCLOG("AI::pursuitStart()");
+	AXLOG("AI::pursuitStart()");
 }
 
 void AI::pursuitUpdate()
@@ -227,7 +227,7 @@ void AI::pursuitUpdate()
 void AI::attackStart(Tank::Direction fireLineDirection, Tank* enemyOnLine)
 {
 	_currentState = States::ATTACK;
-	CCLOG("AI::attackStart()");
+	AXLOG("AI::attackStart()");
 
 	auto owner = dynamic_cast<Tank*>(_owner);
 	owner->tryShoot();
@@ -247,7 +247,7 @@ void AI::escapeStart(const Pos2& escapePoint)
 	_currentState = States::ESCAPE;
 	_escapePoint = escapePoint;
 
-	CCLOG("AI::escapeStart()");
+	AXLOG("AI::escapeStart()");
 }
 
 void AI::escapeUpdate()
@@ -285,7 +285,7 @@ void AI::escapeUpdate()
 void AI::thinkStart()
 {
 	_currentState = States::THINK;
-	CCLOG("AI::thinkStart()");
+	AXLOG("AI::thinkStart()");
 
 	auto owner = dynamic_cast<Tank*>(_owner);
 
@@ -328,7 +328,7 @@ void AI::getBonusStart(Bonus* target)
 	_currentState = States::GET_BONUS;
 	_target = target;
 
-	CCLOG("AI::getBonusStart()");
+	AXLOG("AI::getBonusStart()");
 }
 
 void AI::getBonusUpdate()

@@ -3,7 +3,7 @@
 #include "GameplayScene.h"
 #include "GUI\SimpleMenu.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 #define TAG_CONTINUE	0
 #define TAG_EXIT		1

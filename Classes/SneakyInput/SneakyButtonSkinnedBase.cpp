@@ -1,6 +1,6 @@
 #include "SneakyButtonSkinnedBase.h"
 
-using namespace cocos2d;
+using namespace axys;
 
 SneakyButtonSkinnedBase::SneakyButtonSkinnedBase()
 	: defaultSprite(nullptr), activatedSprite(nullptr), disabledSprite(nullptr), pressSprite(nullptr)

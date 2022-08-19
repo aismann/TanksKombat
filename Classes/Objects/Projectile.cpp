@@ -4,7 +4,7 @@
 #include "Objects\Bonus.h"
 #include "Scenes\GameplayScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 #define PROJ_DELAY 0.04f
 

@@ -1,7 +1,7 @@
 ﻿#include "AboutScene.h"
 #include "MainMenuScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 AboutScene::AboutScene()
 	: _content(nullptr), _content2(nullptr)
@@ -40,7 +40,7 @@ bool AboutScene::init()
 		"zironid_n, M-Tee\n"
 		"Kenney Vleugels\n\n"
 		"3d party code:\n\n"
-		"axys, SneakyInput";
+		"axys v1.0.0b9 (Cocos2DX 4.0 fork), SneakyInput";
 
 	const char* aboutYellow =
 		"Programming and game design:\n\n"

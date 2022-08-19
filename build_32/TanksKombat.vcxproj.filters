@@ -174,14 +174,152 @@
     <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\HelloWorld.png">
       <Filter>Resources</Filter>
     </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\config.plist">
+      <Filter>Resources</Filter>
+    </ClInclude>
     <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\fonts\Marker Felt.ttf">
       <Filter>Resources\fonts</Filter>
     </ClInclude>
     <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\fonts\arial.ttf">
       <Filter>Resources\fonts</Filter>
     </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\fonts\logo_font.png">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\fonts\main_font.png">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\1.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\10.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\11.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\12.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\13.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\14.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\15.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\16.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\17.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\18.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\19.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\2.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\20.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\21.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\22.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\23.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\3.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\4.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\5.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\6.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\7.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\8.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\background\9.png">
+      <Filter>Resources\graphics\background</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\joystick\action1Down.png">
+      <Filter>Resources\graphics\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\joystick\action1Up.png">
+      <Filter>Resources\graphics\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\joystick\dpadDown.png">
+      <Filter>Resources\graphics\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\joystick\joystickDown.png">
+      <Filter>Resources\graphics\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\sprites32.plist">
+      <Filter>Resources\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\sprites32.png">
+      <Filter>Resources\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\tanks_logo.plist">
+      <Filter>Resources\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\graphics\tanks_logo.png">
+      <Filter>Resources\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\music\main.ogg">
+      <Filter>Resources\music</Filter>
+    </ClInclude>
     <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\bonus_kill.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\bonus_respawn.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\game_over.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\menu_select.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\out_of_ammo.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\take_bonus.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\tank_damage.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\tank_fall.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\tank_kill.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\tank_respawn.ogg">
+      <Filter>Resources\sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\______\GitHub\aismann\TanksKombat\Resources\sfx\tank_shot.ogg">
+      <Filter>Resources\sfx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -199,8 +337,23 @@
     <Filter Include="Resources\fonts">
       <UniqueIdentifier>{A2B2629D-8B89-307E-8087-224CFBC8B57D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\graphics">
+      <UniqueIdentifier>{D35A127F-3F7A-3EE8-BB9C-6B6AAE103A1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\graphics\background">
+      <UniqueIdentifier>{786F4DC7-BFFA-3BCD-9CDD-BF5006A35E7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\graphics\joystick">
+      <UniqueIdentifier>{76FCF17D-1F79-3830-BD67-A3B008563E48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\music">
+      <UniqueIdentifier>{8850F77D-F864-38DC-B156-E6C8D8A04A41}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Resources\res">
       <UniqueIdentifier>{ECF9B1BE-E384-3920-97A5-28F5F40FFDC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\sfx">
+      <UniqueIdentifier>{51AE88EB-783E-387D-8A12-DE7F502B3DEA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{CA0D4D72-8BB4-393C-A941-A41F80C9B1C5}</UniqueIdentifier>

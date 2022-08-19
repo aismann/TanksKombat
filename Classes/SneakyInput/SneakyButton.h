@@ -1,7 +1,7 @@
 #ifndef __SNEAKY_BUTTON_H__
 #define __SNEAKY_BUTTON_H__
 
-#include "cocos2d.h"
+#include "axys.h"
 
 class SneakyButton : public ax::Node
 {

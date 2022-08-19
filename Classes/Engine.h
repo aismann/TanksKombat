@@ -1,7 +1,7 @@
 #ifndef  _ENGINE_H_
 #define  _ENGINE_H_
 
-#include "cocos2d.h"
+#include "axys.h"
 #include "Math\Pos2.h"
 #include <string>
 #include <array>

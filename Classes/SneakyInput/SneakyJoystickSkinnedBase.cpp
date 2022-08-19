@@ -1,6 +1,6 @@
 #include "SneakyJoystickSkinnedBase.h"
 
-using namespace cocos2d;
+using namespace axys;
 
 SneakyJoystickSkinnedBase::SneakyJoystickSkinnedBase()
 	: backgroundSprite(nullptr), thumbSprite(nullptr), joystick(nullptr)

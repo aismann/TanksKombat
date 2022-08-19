@@ -3,7 +3,7 @@
 #include "Objects\LevelGrid.h"
 #include "Scenes\GameplayScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 GameObject::GameObject(Type type)
 	: _direction(Direction::UP), _sprite(nullptr), _engine(Engine::getInstance()),

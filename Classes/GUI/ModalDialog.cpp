@@ -1,10 +1,10 @@
-#include "cocos2d.h"
+#include "axys.h"
 #include "Engine.h"
 #include "Scenes/BaseScene.h"
 #include "ModalDialog.h"
 #include "SimpleMenu.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 #define TAG_OK			0
 #define TAG_CANCEL		1

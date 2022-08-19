@@ -1,9 +1,9 @@
-#include "cocos2d.h"
+#include "axys.h"
 #include "Engine.h"
 #include "SimpleMenu.h"
 #include "Scenes\BaseScene.h"
 
-USING_NS_CC;
+USING_NS_AX;
 
 SimpleMenu* SimpleMenu::create(Type type)
 {

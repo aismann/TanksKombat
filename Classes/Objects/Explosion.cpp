@@ -3,7 +3,7 @@
 #include "Scenes\GameplayScene.h"
 
 
-USING_NS_CC;
+USING_NS_AX;
 
 ax::Vector<Explosion*> Explosion::_explosionPool;
 

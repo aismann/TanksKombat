@@ -1,7 +1,7 @@
 #include "Objects\LevelGrid.h"
 #include "Engine.h"
 
-USING_NS_CC;
+USING_NS_AX;
 using namespace std;
 
 #define GROUND_LAYER_TAGS 0

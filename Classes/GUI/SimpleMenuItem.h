@@ -1,7 +1,7 @@
 #ifndef _SIMPLEMENUITEM_H_
 #define _SIMPLEMENUITEM_H_
 
-#include "cocos2d.h"
+#include "axys.h"
 
 class SimpleMenuItem : public ax::MenuItemAtlasFont
 {

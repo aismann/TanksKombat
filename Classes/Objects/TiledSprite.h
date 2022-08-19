@@ -1,7 +1,7 @@
 #ifndef  _TILEDSPRITE_H_
 #define  _TILEDSPRITE_H_
 
-#include "cocos2d.h"
+#include "axys.h"
 
 class TiledSprite : public ax::Sprite
 {
